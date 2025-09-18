@@ -15,7 +15,7 @@ static void	init_data(t_fractal *f, int argc, char **argv)
 	f->offset_x = 0.0;
 	f->offset_y = 0.0;
 	f->color_scheme = 0;
-	f->locked_julia = 0;
+	f->locked_julia = 1;
 	if (ft_strcmp(f->name, "mandelbrot") == 0 && argc == 2)
 		return ;
 	else if (ft_strcmp(f->name, "burning_ship") == 0 && argc == 2)

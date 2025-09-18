@@ -2,7 +2,7 @@
 
 static int	is_valid_number(char *str)
 {
-	int is_dot;
+	int	is_dot;
 
 	is_dot = 0;
 	if (*str == '\0')
@@ -45,6 +45,7 @@ static double	get_value(char *str)
 	}
 	return (res * pow);
 }
+
 double	ft_atod(char *str)
 {
 	double	res;

@@ -2,12 +2,10 @@
 
 void	arg_error(void)
 {
-	int wt;
-
-	wt = write(1, "Please use valid arguments:\n", 28);
-	wt += write(1, "  ./fractol mandelbrot\n", 23);
-	wt += write(1, "  ./fractol burning_ship\n", 25);
-	wt += write(1, "  ./fractol julia <real> <imaginary>\n", 37);
+	write(1, "Please use valid arguments:\n", 28);
+	write(1, "  ./fractol mandelbrot\n", 23);
+	write(1, "  ./fractol burning_ship\n", 25);
+	write(1, "  ./fractol julia <real> <imaginary>\n", 37);
 	exit(EXIT_FAILURE);
 }
 
