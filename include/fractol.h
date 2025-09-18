@@ -7,9 +7,9 @@
 # include "libft.h"
 # include "../minilibx-linux/mlx.h"
 
-# define WIDTH 900
-# define HEIGHT 900
-# define MAX_ITERATIONS 200
+# define WIDTH 800
+# define HEIGHT 800
+# define MAX_ITERATIONS 100
 
 # define KEY_ESC 65307
 # define KEY_LEFT 65361

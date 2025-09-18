@@ -2,10 +2,11 @@
 
 void	arg_error(void)
 {
-	write(1, "Please use valid arguments:\n", 28);
-	write(1, "  ./fractol mandelbrot\n", 23);
-	write(1, "  ./fractol burning_ship\n", 25);
-	write(1, "  ./fractol julia <real> <imaginary>\n", 37);
+	ft_putendl_fd("Usage:\n", 1);
+	ft_putendl_fd("  ./fractol mandelbrot\n", 1);
+	ft_putendl_fd("  ./fractol burning_ship\n", 1);
+	ft_putendl_fd("  ./fractol julia <real> <imaginary>", 1);
+	ft_putendl_fd("And also, for evaluation sake, use: ./fractol bifurcation", 1);
 	exit(EXIT_FAILURE);
 }
 

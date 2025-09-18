@@ -26,7 +26,7 @@ int	get_color(int iterations, t_fractal *f)
 	if (iterations == MAX_ITERATIONS)
 		return (0x000000);
 	if (f->color_scheme == 0)
-		color = gradient_color(iterations, 0x001010, 0xAFEEEE);
+		color = gradient_color(iterations, 0x190D3A, 0x00BEFF);
 	else if (f->color_scheme == 1)
 		color = (iterations * 0x04080F) ^ 0x123456;
 	else
