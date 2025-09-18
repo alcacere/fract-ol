@@ -25,7 +25,7 @@ int	key_handler(int keycode, t_fractal *f)
 		render_fractal(f);
 	}
 	else if (keycode == KEY_UP || keycode == KEY_DOWN
-		|| keycode == KEY_LEFT || keycode == KEY_DOWN)
+		|| keycode == KEY_LEFT || keycode == KEY_RIGHT)
 	{
 		handle_complex_move(keycode, f);
 		render_fractal(f);

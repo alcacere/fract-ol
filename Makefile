@@ -7,16 +7,16 @@ CC = cc
 
 CFLAGS = -Wall -Werror -Wextra -I./include -I./libft
 
-SRC = ./src/colors/colors.c \
-	./src/events/events.c \
-	./src/fractal_sets/fractal_sets.c \
-	./src/init/init.c \
-	./src/main/main.c \
-	./src/renders/render_bifurcation.c \
-	./src/renders/render.c \
-	./src/renders/render_fractals.c \
-	./src/utils/cleanup.c \
-	./src/utils/utils.c
+SRC = ./src/colors.c \
+	./src/events.c \
+	./src/fractal_sets.c \
+	./src/init.c \
+	./src/main.c \
+	./src/render_bifurcation.c \
+	./src/render.c \
+	./src/render_fractals.c \
+	./src/cleanup.c \
+	./src/utils.c
 
 
 OBJ = $(SRC:.c=.o)
