@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   events.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alcacere <alcacere@student42madrid.co      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/18 09:34:19 by alcacere          #+#    #+#             */
+/*   Updated: 2025/09/19 13:31:10 by alcacere         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "fractol.h"
 
 static void	handle_complex_move(int keycode, t_fractal *f)
 {
 	double	move_step;
 
-	move_step = 0.2 / f->zoom;
+	move_step = 0.3 / f->zoom;
 	if (keycode == KEY_UP)
 		f->offset_y -= move_step;
 	else if (keycode == KEY_DOWN)
@@ -30,6 +41,15 @@ int	key_handler(int keycode, t_fractal *f)
 		handle_complex_move(keycode, f);
 		render_fractal(f);
 	}
+	else if (keycode == KEY_R)
+	{
+		f->zoom = 1.0;
+		f->offset_x = 0.0;
+		f->offset_y = 0.0;
+		render_fractal(f);
+	}
+	else if (keycode == KEY_U || keycode == KEY_D)
+		key_iteration_handler(keycode, f);
 	return (0);
 }
 
@@ -72,4 +92,18 @@ int	mouse_motion_handler(int x, int y, t_fractal *f)
 		render_fractal(f);
 	}
 	return (0);
+}
+
+void	key_iteration_handler(int keycode, t_fractal *f)
+{
+	if (keycode == KEY_U)
+	{
+		f->m_i += 5;
+		render_fractal(f);
+	}
+	else if (keycode == KEY_D)
+	{
+		f->m_i -= 5;
+		render_fractal(f);
+	}
 }

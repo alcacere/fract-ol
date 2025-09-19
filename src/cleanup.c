@@ -1,12 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cleanup.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alcacere <alcacere@student42madrid.co      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/18 09:36:19 by alcacere          #+#    #+#             */
+/*   Updated: 2025/09/19 11:16:42 by alcacere         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "fractol.h"
 
 void	arg_error(void)
 {
-	ft_putendl_fd("Usage:\n", 1);
-	ft_putendl_fd("  ./fractol mandelbrot\n", 1);
-	ft_putendl_fd("  ./fractol burning_ship\n", 1);
+	ft_putendl_fd("Usage:", 1);
+	ft_putendl_fd("  ./fractol mandelbrot", 1);
+	ft_putendl_fd("  ./fractol burning_ship", 1);
 	ft_putendl_fd("  ./fractol julia <real> <imaginary>", 1);
-	ft_putendl_fd("And also, for evaluation sake, use: ./fractol bifurcation", 1);
+	ft_putendl_fd("  ./fractol bifurcation", 1);
 	exit(EXIT_FAILURE);
 }
 

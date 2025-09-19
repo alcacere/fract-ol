@@ -1,3 +1,14 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: alcacere <alcacere@student42madrid.co      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/09/19 02:32:56 by alcacere          #+#    #+#              #
+#    Updated: 2025/09/19 21:10:14 by alcacere         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 GREEN = "\033[32m"
 RESET = "\033[0m"
 
@@ -5,7 +16,7 @@ NAME = fractol
 
 CC = cc
 
-CFLAGS = -Wall -Werror -Wextra -I./include -I./libft
+CFLAGS = -Wall -Werror -Wextra -I./include -I./libft -g3 -fsanitize=address
 
 SRC = ./src/colors.c \
 	./src/events.c \
@@ -17,7 +28,6 @@ SRC = ./src/colors.c \
 	./src/render_fractals.c \
 	./src/cleanup.c \
 	./src/utils.c
-
 
 OBJ = $(SRC:.c=.o)
 
@@ -40,6 +50,7 @@ $(LIBFT) :
 $(MLX) :
 	@echo $(GREEN)"COMPILING MINILIBX" $(RESET)
 	@$(MAKE) -C $(MLX_PATH)
+
 %.o: %.c 
 	@$(CC) $(CFLAGS) -c $< -o $@
 

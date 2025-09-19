@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alcacere <alcacere@student42madrid.co      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/18 09:34:46 by alcacere          #+#    #+#             */
+/*   Updated: 2025/09/19 13:34:35 by alcacere         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "fractol.h"
 
 static void	parse_julia_args(t_fractal *f, int argc, char **argv)
@@ -16,6 +27,7 @@ static void	init_data(t_fractal *f, int argc, char **argv)
 	f->offset_y = 0.0;
 	f->color_scheme = 0;
 	f->locked_julia = 1;
+	f->m_i = MAX_ITERATIONS;
 	if (ft_strcmp(f->name, "mandelbrot") == 0 && argc == 2)
 		return ;
 	else if (ft_strcmp(f->name, "burning_ship") == 0 && argc == 2)
