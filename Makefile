@@ -16,7 +16,7 @@ NAME = fractol
 
 CC = cc
 
-CFLAGS = -Wall -Werror -Wextra -I./include -I./libft -g3 -fsanitize=address
+CFLAGS = -Wall -Werror -Wextra -I./include -I./libft -O3
 
 SRC = ./src/colors.c \
 	./src/events.c \
@@ -57,6 +57,7 @@ $(MLX) :
 $(NAME) : $(LIBFT) $(MLX) $(OBJ)
 	@echo $(GREEN)"COMPILING FRACTOL BINARY" $(RESET)
 	@$(CC) $(CFLAGS) $(OBJ) $(LIBFT) $(MLX) $(MLX_FLAGS) -o $(NAME)
+	strip $(NAME)
 
 clean:
 	@echo $(GREEN)"CLEANING UP OBJECTS" $(RESET)

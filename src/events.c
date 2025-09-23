@@ -72,10 +72,8 @@ int	mouse_handler(int button, int x, int y, t_fractal *f)
 		f->offset_y += mouse_before.i - mouse_after.i;
 	}
 	else if (button == MOUSE_RIGHT_CLICK)
-	{
 		if (ft_strcmp(f->name, "julia") == 0)
 			f->locked_julia = !f->locked_julia;
-	}
 	render_fractal(f);
 	return (0);
 }

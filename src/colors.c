@@ -35,9 +35,9 @@ int	get_color(int iterations, t_fractal *f)
 	int	color;
 
 	if (iterations == f->m_i)
-		return (0x000000);
+		return (0x0a0a0a);
 	if (f->color_scheme == 0)
-		color = gradient_color(iterations, 0x190D3A, 0x00BEFF, f);
+		color = gradient_color(iterations, 0x2c142c, 0x7a1b0c, f);
 	else if (f->color_scheme == 1)
 		color = (iterations * 0x04080F) ^ 0x123456;
 	else

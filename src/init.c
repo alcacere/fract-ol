@@ -17,6 +17,9 @@ static void	parse_julia_args(t_fractal *f, int argc, char **argv)
 		arg_error();
 	f->julia_c_r = ft_atod(argv[2]);
 	f->julia_c_i = ft_atod(argv[3]);
+	if (f->julia_c_r < -2.0 || f->julia_c_r > 2.0 ||
+		f->julia_c_i < -2.0 || f->julia_c_i > 2.0)
+		range_error();
 }
 
 static void	init_data(t_fractal *f, int argc, char **argv)

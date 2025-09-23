@@ -32,7 +32,7 @@ void	render_bifurcation(t_fractal *f)
 		{
 			x_n = r * x_n * (1 - x_n);
 			y_pixel = (int)((1 - x_n) * HEIGHT);
-			my_pixel_put(&f->img, x, y_pixel, 0x00FF00);
+			my_pixel_put(&f->img, x, y_pixel, 0x00FFFF);
 		}
 	}
 }

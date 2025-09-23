@@ -29,3 +29,10 @@ int	close_handler(t_fractal *f)
 	exit(EXIT_SUCCESS);
 	return (0);
 }
+
+void	range_error(void)
+{
+	ft_putendl_fd("Error: Julia parameters are out of the recommended range.", 1);
+	ft_putendl_fd("Please provide values between -2.0 and 2.0.", 1);
+	exit(EXIT_FAILURE);
+}

@@ -19,6 +19,7 @@ void	render_complex_fractals(t_fractal *f)
 	t_complex	c;
 
 	y = -1;
+	iterations = 0;
 	while (++y < HEIGHT)
 	{
 		x = -1;
@@ -29,7 +30,7 @@ void	render_complex_fractals(t_fractal *f)
 				iterations = calculate_julia(f, c.r, c.i, f->m_i);
 			else if (ft_strcmp(f->name, "mandelbrot") == 0)
 				iterations = calculate_mandelbrot(c.r, c.i, f->m_i);
-			else
+			else if (ft_strcmp(f->name, "burning_ship") == 0)
 				iterations = calculate_burning_ship(c.r, c.i, f->m_i);
 			my_pixel_put(&f->img, x, y, get_color(iterations, f));
 		}

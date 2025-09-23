@@ -87,6 +87,7 @@ int			mouse_motion_handler(int x, int y, t_fractal *f);
 
 void		arg_error(void);
 int			close_handler(t_fractal *f);
+void		range_error(void);
 
 double		ft_atod(char *str);
 
